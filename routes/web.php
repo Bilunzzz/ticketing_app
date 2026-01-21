@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\HistoriesController;
 use App\Http\Controllers\Admin\TiketController;
+use App\Http\Controllers\Admin\TipeTiketController;
 use App\Http\Controllers\User\HomeController;
 // Highlight ini
 use App\Http\Controllers\Admin\EventController as AdminEventController;
@@ -32,6 +33,8 @@ Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
         Route::resource('events', AdminEventController::class);
 
         Route::resource('tickets', TiketController::class);
+
+        Route::resource('tipe-tikets', TipeTiketController::class);
 
         Route::get('/histories', [HistoriesController::class, 'index'])->name('histories.index');
         Route::get('/histories/{id}', [HistoriesController::class, 'show'])->name('histories.show');

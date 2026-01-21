@@ -11,7 +11,7 @@ class Tiket extends Model
 
     protected $fillable = [
         'event_id',
-        'tipe',
+        'tipe_tiket_id',
         'harga',
         'stok',
     ];
@@ -19,6 +19,11 @@ class Tiket extends Model
     public function event()
     {
         return $this->belongsTo(Event::class);
+    }
+
+    public function tipeTiket()
+    {
+        return $this->belongsTo(TipeTiket::class);
     }
 
     public function detailOrders()
