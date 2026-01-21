@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class TipeTiket extends Model
+{
+    use HasFactory;
+
+    protected $table = 'tipe_tikets';
+
+    protected $fillable = [
+        'nama',
+    ];
+
+    /**
+     * Get the tikets for the tipe tiket.
+     */
+    public function tikets()
+    {
+        return $this->hasMany(Tiket::class);
+    }
+}
