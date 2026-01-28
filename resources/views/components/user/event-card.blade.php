@@ -12,7 +12,7 @@ $formattedDate = $date
 $imageUrl = $image
 ? (filter_var($image, FILTER_VALIDATE_URL)
 ? $image
-: asset('images/events/' . $image))
+: asset('images/' . $image))
 : asset('images/konser.jpeg');
 
 @endphp

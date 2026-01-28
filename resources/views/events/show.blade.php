@@ -4,7 +4,9 @@
       <div class="breadcrumbs">
         <ul>
           <li><a href="{{ route('home') }}" class="link link-neutral">Beranda</a></li>
+          <li> > </li></li>
           <li><a href="#" class="link link-neutral">Event</a></li>
+          <li> > </li></li>
           <li>{{ $event->judul }}</li>
         </ul>
       </div>
@@ -15,7 +17,7 @@
       <div class="lg:col-span-2">
         <div class="card bg-base-100 shadow">
           <figure>
-            <img src="{{ $event->gambar ? asset('images/events/' . $event->gambar) : 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp' }}" alt="{{ $event->judul }}" class="w-full h-96 object-cover" />
+            <img src="{{ $event->gambar ? asset('images/' . $event->gambar) : 'https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp' }}" alt="{{ $event->judul }}" class="w-full h-96 object-cover" />
           </figure>
           <div class="card-body">
             <div class="flex justify-between items-start gap-4">
